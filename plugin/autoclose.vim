@@ -67,8 +67,8 @@ fun <SID>ToggleAutoCloseMappings() " --- {{{2
     if g:autoclose_on
         iunmap "
         iunmap '
-        iunmap (
-        iunmap )
+        " iunmap (
+        " iunmap )
         iunmap [
         iunmap ]
         iunmap {
@@ -81,8 +81,8 @@ fun <SID>ToggleAutoCloseMappings() " --- {{{2
     else
         inoremap <silent> " <C-R>=<SID>QuoteDelim('"')<CR>
         inoremap <silent> ' <C-R>=match(getline('.')[col('.') - 2],'\w') == 0 && getline('.')[col('.')-1] != "'" ? "'" : <SID>QuoteDelim("'")<CR>
-        inoremap <silent> ( (<C-R>=<SID>CloseStackPush(')')<CR>
-        inoremap ) <C-R>=<SID>CloseStackPop(')')<CR>
+        " inoremap <silent> ( (<C-R>=<SID>CloseStackPush(')')<CR>
+        " inoremap ) <C-R>=<SID>CloseStackPop(')')<CR>
         inoremap <silent> [ [<C-R>=<SID>CloseStackPush(']')<CR>
         inoremap <silent> ] <C-R>=<SID>CloseStackPop(']')<CR>
         "inoremap <silent> { {<C-R>=<SID>CloseStackPush('}')<CR>
